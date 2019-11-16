@@ -3,9 +3,10 @@
 #include "ui_mainwindow.h"
 //==================================================================================================
 using namespace nayk;
+using namespace gui_utils;
 
-const QString developerStr   = QObject::tr("Евгений Тетерин");
-const QString descriptionStr = QObject::tr("Описание приложения");
+const QString developerStr   = QObject::tr("Evgeny Teterin");
+const QString descriptionStr = QObject::tr("Description");
 
 //==================================================================================================
 MainWindow::MainWindow(QWidget *parent)
@@ -20,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     log = new Log(this);
     connect(this, &MainWindow::toLog, log, &Log::saveToLog);
 
-    GuiUtils::moveToCenterScreen(this);
+    moveToCenterScreen(this);
 }
 //==================================================================================================
 MainWindow::~MainWindow()
@@ -38,7 +39,7 @@ MainWindow::~MainWindow()
 //==================================================================================================
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    if ( GuiUtils::messageConfirm( this, tr("Завершить работу с программой?")) ) {
+    if ( messageConfirm( this, tr("Close application?")) ) {
 
         event->accept();
     }
@@ -64,6 +65,6 @@ void MainWindow::on_actionSettings_triggered()
 //==================================================================================================
 void MainWindow::on_actionAbout_triggered()
 {
-    GuiUtils::showAboutDialog( developerStr, descriptionStr );
+    showAboutDialog( developerStr, descriptionStr );
 }
 //==================================================================================================

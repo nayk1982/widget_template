@@ -9,11 +9,11 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    if(!nayk::GuiAppCore::initApplication( "WidgetTemplate",
-                                           "WidgetTemplate",
-                                           "Organization",
-                                           "OrgDomain"
-                                           )) {
+    if(!gui_app_core::initializeApplication( "WidgetTemplate",
+                                             "WidgetTemplate",
+                                             "Organization",
+                                             "OrgDomain"
+                                             )) {
         return 0;
     }
 
