@@ -16,10 +16,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     dialogLog = new DialogLog(this);
-    connect(this, &MainWindow::toLog, dialogLog, &DialogLog::saveToLog);
+    connect(this, &MainWindow::toLog, dialogLog, &DialogLog::saveToLog, Qt::QueuedConnection);
 
     log = new Log(this);
-    connect(this, &MainWindow::toLog, log, &Log::saveToLog);
+    connect(this, &MainWindow::toLog, log, &Log::saveToLog, Qt::QueuedConnection);
 
     moveToCenterScreen(this);
 }
