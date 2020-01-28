@@ -2,11 +2,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 //==================================================================================================
+
 using namespace nayk;
 using namespace gui_utils;
-
-const QString developerStr   = QObject::tr("Evgeny Teterin");
-const QString descriptionStr = QObject::tr("Description");
 
 //==================================================================================================
 MainWindow::MainWindow(QWidget *parent)
@@ -39,7 +37,7 @@ MainWindow::~MainWindow()
 //==================================================================================================
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    if ( messageConfirm( this, tr("Close application?")) ) {
+    if ( messageConfirm( tr("Завершить работу с программой?")) ) {
 
         event->accept();
     }
@@ -65,6 +63,8 @@ void MainWindow::on_actionSettings_triggered()
 //==================================================================================================
 void MainWindow::on_actionAbout_triggered()
 {
-    showAboutDialog( developerStr, descriptionStr );
+    showAboutDialog( qApp->applicationDisplayName(),
+                     developerStr,
+                     descriptionStr );
 }
 //==================================================================================================

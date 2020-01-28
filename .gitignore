@@ -1,8 +1,6 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
 
 .build/
-/_distrib/*
-/_other/
 *~
 *.autosave
 *.a
@@ -16,7 +14,6 @@
 *.so.*
 *_pch.h.cpp
 *_resource.rc
-*.qm
 *.tmp
 *.bak
 *.~*
@@ -34,8 +31,7 @@ Makefile*
 moc_*.cpp
 ui_*.h
 qrc_*.cpp
-Thumbs.db
-*.res
+Thumbs.db*
 /.qmake.cache
 /.qmake.stash
 
@@ -74,3 +70,4 @@ Thumbs.db
 # --------
 *.dll
 *.exe
+_distrib/

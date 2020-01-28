@@ -26,30 +26,30 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>Файл</string>
     </property>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
-     <string>View</string>
+     <string>Вид</string>
     </property>
     <addaction name="actionToolBar"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
-     <string>Edit</string>
+     <string>Правка</string>
     </property>
     <addaction name="actionSettings"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>Помощь</string>
     </property>
     <property name="separatorsCollapsible">
      <bool>false</bool>
@@ -85,11 +85,11 @@
   </widget>
   <action name="actionExit">
    <property name="icon">
-    <iconset resource="../../_nayk/resources/common.qrc">
+    <iconset resource="../../_nayk/resources/icons.qrc">
      <normaloff>:/icons/exit_48px.png</normaloff>:/icons/exit_48px.png</iconset>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Выход</string>
    </property>
   </action>
   <action name="actionToolBar">
@@ -100,30 +100,30 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>ToolBar</string>
+    <string>Панель инструментов</string>
    </property>
   </action>
   <action name="actionSettings">
    <property name="icon">
-    <iconset resource="../../_nayk/resources/common.qrc">
+    <iconset resource="../../_nayk/resources/icons.qrc">
      <normaloff>:/icons/settings_48px.png</normaloff>:/icons/settings_48px.png</iconset>
    </property>
    <property name="text">
-    <string>Settings...</string>
+    <string>Настройки...</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset resource="../../_nayk/resources/common.qrc">
+    <iconset resource="../../_nayk/resources/icons.qrc">
      <normaloff>:/icons/info_48px.png</normaloff>:/icons/info_48px.png</iconset>
    </property>
    <property name="text">
-    <string>About...</string>
+    <string>О программе...</string>
    </property>
   </action>
  </widget>
  <resources>
-  <include location="../../_nayk/resources/common.qrc"/>
+  <include location="../../_nayk/resources/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

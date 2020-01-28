@@ -17,6 +17,8 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+    const QString developerStr   = tr("Evgeny Teterin");
+    const QString descriptionStr = tr("Description");
 
 public:
     MainWindow(QWidget *parent = nullptr);
