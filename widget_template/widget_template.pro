@@ -10,22 +10,22 @@ include( $${PWD}/../../_nayk/nayk.pri )
 
 # Includes =====================================================================
 INCLUDEPATH *= \
-    $${PWD}/include \
+    $${PWD}/include
 
 # Sources and Headers ==========================================================
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
+    mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
+    mainwindow.h
 
 FORMS += \
-    mainwindow.ui \
+    mainwindow.ui
 
 # Resources files ==============================================================
 RESOURCES += \
-    main.qrc \
+    main.qrc
 
 win32:RC_FILE = main.rc
 

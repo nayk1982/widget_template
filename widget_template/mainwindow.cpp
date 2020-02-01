@@ -37,7 +37,7 @@ MainWindow::~MainWindow()
 //==================================================================================================
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    if ( messageConfirm( tr("Завершить работу с программой?")) ) {
+    if ( messageConfirm( tr("Quit the program?")) ) {
 
         event->accept();
     }
