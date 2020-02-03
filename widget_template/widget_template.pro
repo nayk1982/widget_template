@@ -6,6 +6,8 @@
 
 QT += core gui widgets
 
+VERSION = 1.0
+
 include( $${PWD}/../../_nayk/nayk.pri )
 
 # Includes =====================================================================
