@@ -3,21 +3,21 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
-
 #include "Log"
 #include "DialogLog"
+#include "Settings"
 
-//==================================================================================================
+//==============================================================================
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-//==================================================================================================
+//==============================================================================
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    const QString developerStr   = tr("Evgeny Teterin");
+    const QString developerStr   = tr("Evgeniy Teterin");
     const QString descriptionStr = tr("Description");
 
 public:
@@ -29,8 +29,11 @@ signals:
 
 private:
     Ui::MainWindow *ui;
-    nayk::Log *log {nullptr};
-    nayk::DialogLog *dialogLog {nullptr};
+    nayk::Log *m_log {nullptr};
+    nayk::DialogLog *m_dialogLog {nullptr};
+    Settings m_settings;
+
+    void applySettings();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -40,7 +43,8 @@ private slots:
     void on_actionToolBar_triggered(bool checked);
     void on_actionSettings_triggered();
     void on_actionAbout_triggered();
+    void on_toolBarVisibilityChanged(bool visibility);
 };
 
-//==================================================================================================
+//==============================================================================
 #endif // MAINWINDOW_H

@@ -18,13 +18,18 @@ INCLUDEPATH *= \
 # Sources and Headers ==========================================================
 
 SOURCES += \
+    dialogsettings.cpp \
+    src/settings.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    dialogsettings.h \
+    include/settings.h \
     mainwindow.h
 
 FORMS += \
+    dialogsettings.ui \
     mainwindow.ui
 
 # Resources files ==============================================================
