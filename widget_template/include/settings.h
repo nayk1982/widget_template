@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QSettings>
-#include "Log"
+#include "nayk/Log"
 //==============================================================================
 class Settings : public QObject
 {

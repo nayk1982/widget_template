@@ -2,8 +2,8 @@
 #include <QFile>
 #include <QSplashScreen>
 #include <QPixmap>
-#include "GuiAppCore"
-#include "ImagesConst"
+#include "nayk/GuiAppCore"
+#include "nayk/ImagesConst"
 #include "mainwindow.h"
 //==================================================================================================
 int main(int argc, char *argv[])

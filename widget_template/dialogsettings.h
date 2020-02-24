@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include "Settings"
-#include "Log"
+#include "nayk/Log"
 //==============================================================================
 namespace Ui {
 class DialogSettings;

@@ -1,4 +1,4 @@
-#include "GuiUtils"
+#include "nayk/GuiUtils"
 #include "dialogsettings.h"
 #include "ui_dialogsettings.h"
 //==============================================================================

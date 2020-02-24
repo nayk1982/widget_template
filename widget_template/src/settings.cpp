@@ -1,5 +1,5 @@
-#include "AppCore"
-#include "FileSys"
+#include "nayk/AppCore"
+#include "nayk/FileSys"
 #include "settings.h"
 
 //==============================================================================
@@ -18,7 +18,7 @@ Settings::Settings(QObject *parent) : QObject(parent)
 bool Settings::saveSettings()
 {
     emit startWrite();
-    emit toLog(tr("Сохранение настроек в файл '%1'")
+    emit toLog(tr("Save settings to file '%1'")
                .arg(file_Config), Log::LogInfo);
 
     QSettings ini(profilePath() + file_Config, QSettings::IniFormat);
@@ -89,7 +89,7 @@ void Settings::setLogCount(int logCount)
 //==============================================================================
 bool Settings::readSettings()
 {
-    emit toLog(tr("Чтение настроек из файла '%1'")
+    emit toLog(tr("Read settings from file '%1'")
                .arg(file_Config), Log::LogInfo);
 
     QSettings ini(profilePath() + file_Config, QSettings::IniFormat);
@@ -106,10 +106,10 @@ bool Settings::checkIniStatus(const QSettings &ini)
     case QSettings::NoError:
         return true;
     case QSettings::AccessError:
-        m_lastError = tr("Ошибка доступа к файлу '%1'").arg(file_Config);
+        m_lastError = tr("File access error '%1'").arg(file_Config);
         break;
     case QSettings::FormatError:
-        m_lastError = tr("Неверный формат файла '%1'").arg(file_Config);
+        m_lastError = tr("File format error '%1'").arg(file_Config);
         break;
     }
 

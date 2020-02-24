@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
-#include "Log"
-#include "DialogLog"
+#include "nayk/Log"
+#include "nayk/DialogLog"
 #include "Settings"
 
 //==============================================================================

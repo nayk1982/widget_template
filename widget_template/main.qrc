@@ -3,5 +3,6 @@
         <file>images/main_icon.png</file>
         <file>images/main_splash.png</file>
         <file>images/main_title.png</file>
+        <file>translations/main_ru.qm</file>
     </qresource>
 </RCC>
